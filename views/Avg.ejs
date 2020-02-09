@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel='stylesheet' href='/stylesheets/page.css' />
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALkCR7jrReo8uxvqbbFartyjCr1HPxltU&libraries=places"></script> -->
+  <!-- <script src="/javascripts/app.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/places.js@1.16.4"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<style>
+
+  #container {
+    height: 400px; 
+}
+
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 310px; 
+    max-width: 500px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+	font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+</style>
+</head>
+<body>
+<br><br><br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <div style="text-align: center;" class="alert alert-primary" role="alert">
+          Thank you! Your Offer Price is : $<textbox id="bid"></textbox><br>
+          <br><br>
+
+          
+          <figure class="highcharts-figure">
+                <div id="container"></div>
+                
+              </figure>
+          
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+      </div>
+      
+      </div>
+    
+                   
+    <!-- <label>Average Price of Zillow and Eppraisal:   </label>
+    <textbox id="avg"></textbox><br>
+    
+    <label>Repair Cost:   </label>
+    <textbox id="cost"></textbox><br>
+
+    <label>70%:   </label>
+    <textbox id="per"></textbox><br>
+
+    <label>Offer:    </label>
+    <textbox id="offer"></textbox><br>
+
+    <label>Bid 85%:    </label>
+    <textbox id="bid"></textbox><br> -->
+
+    <script src="/javascripts/avg.js"></script>
+
+</body>
+</html>
