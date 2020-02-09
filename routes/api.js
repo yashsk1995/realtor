@@ -6,13 +6,21 @@ require('dotenv').config();
 var router = express.Router();
 
 var mysql = require('mysql');
+var connection;
+
+if(process.env.JAWSDB_URL){
+  connection=mysql.createConnection(process.env.JAWSDB_URL);
+
+}
+else{
+
 var mysql_con = mysql.createConnection({
   host: process.env.mysql_host,
   user: process.env.mysql_user,
   password: process.env.mysql_password,
   database: process.env.mysql_db
 })
-
+}
 mysql_con.connect(function(err) {
   if (err) throw err;
 
