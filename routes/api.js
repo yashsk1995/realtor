@@ -15,10 +15,11 @@ if(process.env.JAWSDB_URL){
 else{
 
 var mysql_con = mysql.createConnection({
-  host: process.env.mysql_host,
-  user: process.env.mysql_user,
-  password: process.env.mysql_password,
-  database: process.env.mysql_db
+  host: "localhost",
+  port: 3306,
+  user: 'fuhipswo0h3vh5ok',
+  password: 'mqksfv8m2dtersr1',
+  database: 'gwvhxhwp56biqo9x'
 })
 }
 mysql_con.connect(function(err) {
