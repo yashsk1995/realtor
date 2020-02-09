@@ -71,7 +71,7 @@ router.post('/get_Eppraisal_deep_search', function(req, res, next) {
 
 router.get('/get_zillow_deep_search', function(req, res, next) {
   // res.json({'success': 'ok'});
-  axios.get('http://www.zillow.com/webservice/GetDeepSearchResults.htm?zws-id=X1-ZWz1hcgdd23ojv_aj9j5&address=New York Avenue&citystatezip=New Brunswick, New Jersey')
+  axios.get('http://www.zillow.com/webservice/GetDeepSearchResults.htm?zws-id='+ ZWSID +'&address=New York Avenue&citystatezip=New Brunswick, New Jersey')
   .then(response => {
     console.log(xmlParser.toJson(response.data));
     res.json(xmlParser.toJson(response.data));
